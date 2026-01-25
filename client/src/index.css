@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: "Outfit", sans-serif;
+}
+
+@theme {
+  --color-primary: #6B7B4A;
+  --color-primery-dull: #1F58D8;
+  --color-light: #F1F5F9;
+  --color-borderColor: #c4c7d2;
+  --color-army-900: #0B2A15;
+  --color-army-800: #113B21;
+  --color-army-700: #2A5A30;
+  --color-army-700: #D9C9A3;
+  --color-accent-yellow: #E0B23A;
+  --color-muted-foreground: #B8BDB3;
+  --color-charcoal: #111213;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+}
+
+
+/* iPhone layout fixes */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overscroll-behavior: none;
+}
+
+body {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Правильна висота на iOS */
+:root {
+  --safe-vh: 100%;
+}
+
+@supports (-webkit-touch-callout: none) {
+  :root {
+    --safe-vh: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+  }
+}
