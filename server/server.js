@@ -12,9 +12,9 @@ import categoryRouter from './routes/categoryRouter.js'
 const app = express()
 
 const allowedOrigins = [
-  'https://162ombr.vercel.app',
-  'https://162ombr.com.ua',
-  'https://www.162ombr.com.ua'
+  'https://https://162ombr-three.vercel.app',
+  'https://managementbattalion.162ombr.com.ua',
+  'https://www.managementbattalion.162ombr.com.ua'
 ]
 
 app.use(cors({
