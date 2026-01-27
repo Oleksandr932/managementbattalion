@@ -13,8 +13,8 @@ const app = express()
 
 const allowedOrigins = [
   'https://162ombr-three.vercel.app',
-  'https://managementbattalion.162ombr.com.ua',
-  'https://www.managementbattalion.162ombr.com.ua'
+  'https://bu.162ombr.com.ua',
+  'https://www.bu.162ombr.com.ua'
 ]
 
 app.use(cors({
