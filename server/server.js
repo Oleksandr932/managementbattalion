@@ -46,7 +46,7 @@ app.use('/api/job', jobRouter)
 app.use('/api/category', categoryRouter)
 
 const PORT = process.env.PORT || 3000
-
+ 
 
 // ⬇️ ВАЖЛИВО: старт через async-функцію
 const startServer = async () => {
