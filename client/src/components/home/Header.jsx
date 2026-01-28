@@ -48,7 +48,7 @@ const Heared = () => {
                     {/* ChatBot Button */}
                     <button className='w-full md:w-auto px-8 py-3 rounded-xl font-semibold text-lg lg:text-3xl text-borderColor bg-primary/80 backdrop-blur-sm hover:bg-primary active:bg-primary
                     transition border border-borderColor '
-                        onClick={() => window.open('https://t.me/military_law_help', '_blank')}>
+                        onClick={() => window.open('https://t.me/Esalesvod', '_blank')}>
                         Консультація
                     </button>
                 </div>
