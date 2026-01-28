@@ -56,9 +56,6 @@ export const menuLinks = [
 export const ownerMenuLinks = [
     { name: "Dashboard", path: "/owner", nameSm: "Desh." },
 
-    { name: "Додати Категорію", path: "/owner/addCategory", nameSm: "++ Кат." },
-    { name: "Видалити Категорію", path: "/owner/delCategory", nameSm: "-- Кат." },
-
     { name: "Додати Вакансію", path: "/owner/addJob", nameSm: "++ Вак." },
     { name: "Видалити Вакансію", path: "/owner/delJob", nameSm: "-- Вак." },
 

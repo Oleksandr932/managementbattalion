@@ -6,7 +6,6 @@ const jobSchema = new mongoose.Schema({
     owner: { type: ObjectId, ref: 'User' },
     name: { type: String, required: true },
     image: { type: String, required: true },
-    category: { type: ObjectId, ref: 'Category', default: null },
     description: { type: String, required: true },
     responsibilities: {type: Array, default: []},
     requirements: {type: Array, default: []},
