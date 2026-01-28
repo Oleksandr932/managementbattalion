@@ -147,7 +147,8 @@ const Volunteers = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, delay: 0.5 }}
-                  className="flex flex-col items-start gap-6 bg-white p-6 rounded-xl shadow-md" key={index + "report"} >
+                  className="flex flex-col md:flex-row items-start gap-6 bg-white p-6 rounded-xl shadow-md w-full"
+                  key={index + "report"} >
                   <div>
                     <img src={report.image} alt={report.title} className="min-w-70 max-w-70 h-auto object-cover rounded-lg shadow-sm" />
                   </div>
