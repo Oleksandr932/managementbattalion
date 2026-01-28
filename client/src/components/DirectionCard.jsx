@@ -5,7 +5,7 @@ const DirectionCard = ({ direction }) => {
     const navigate = useNavigate()
 
     return (
-        <div onClick={() => { navigate(`/position/${position._id}`); scrollTo(0, 0) }}
+        <div onClick={() => { navigate(`/position/${direction._id}`); scrollTo(0, 0) }}
             className=' overflow-hidden shadow-lg hover:-translate-y-1 min-h-82
             transition-all duration-500 cursor-pointer group rounded-xl'>
             {/* Direction image and text on image */}
