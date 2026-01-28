@@ -49,7 +49,7 @@ const DelRepord = () => {
                 {reportsData.map((report) => (
                     <div
                         key={report._id}
-                        className='flex flex-col md:flex-row items-start gap-6 bg-white p-6 rounded-xl shadow-md w-full overflow-hidden'>
+                        className='flex flex-col md:flex-row items-start gap-6 bg-white p-6 rounded-xl shadow-md'>
                         <img
                             src={report.image}
                             alt={report.title}

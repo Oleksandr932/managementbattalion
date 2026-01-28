@@ -147,27 +147,16 @@ const Volunteers = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, delay: 0.5 }}
-                  className="flex flex-col md:flex-row items-start gap-6 bg-white p-6 rounded-xl shadow-md w-full overflow-hidden"
-                  key={index + "report"}
-                >
-                  <div className="w-full md:w-64 shrink-0">
-                    <img
-                      src={report.image}
-                      alt={report.title}
-                      className="w-full h-auto object-cover rounded-lg shadow-sm"
-                    />
+                  className="flex flex-col md:flex-row items-start gap-6 bg-white p-6 rounded-xl shadow-md"
+                  key={index + "report"} >
+                  <div>
+                    <img src={report.image} alt={report.title} className="min-w-70 max-w-70 h-auto object-cover rounded-lg shadow-sm" />
                   </div>
-
-                  <div className="flex-1 min-w-0">
-                    <p className="text-lg font-semibold text-primary wrap-break-word">
-                      {report.title}
-                    </p>
-                    <p className="text-sm text-black pt-2 wrap-break-word">
-                      {report.description}
-                    </p>
+                  <div>
+                    <p className='text-lg font-semibold text-primary'>{report.title}</p>
+                    <p className='text-sm text-black pt-2'>{report.description}</p>
                   </div>
                 </motion.div>
-
               ))}
             </div>
           </motion.div>
