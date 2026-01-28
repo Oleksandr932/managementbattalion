@@ -20,8 +20,6 @@ import Login from './components/Login'
 import DelJob from './pages/owner/DelJob'
 import DelNeeds from './pages/owner/DelNeeds'
 import DelRepord from './pages/owner/DelRepord'
-import AddCategory from './pages/owner/AddCategory'
-import DelCategory from './pages/owner/DelCategory'
 import FormApp from './components/helpers/Form'
 import { useSelector } from 'react-redux'
 import UpdateJob from './pages/owner/UpdateJob'
@@ -52,8 +50,6 @@ const App = () => {
         
         <Route path='/owner' element={<Layout />}>
           <Route index element={<Dashboard />} />
-          <Route path='addCategory' element={<AddCategory />} />
-          <Route path='delCategory' element={<DelCategory />} />
           <Route path='addJob' element={<AddJob />} />
           <Route path='updateJob/:id' element={<UpdateJob />} />
           <Route path='delJob' element={<DelJob />} />
