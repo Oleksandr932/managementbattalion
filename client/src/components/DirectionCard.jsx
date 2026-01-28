@@ -17,7 +17,7 @@ const DirectionCard = ({ direction }) => {
             transition-all duration-500 cursor-pointer group rounded-xl'>
             {/* Direction image and text on image */}
             <div className='relative h-48 overflow-hidden'>
-                <img src={direction.href} alt="Direction" className='w-full object-cover
+                <img src={direction.image} alt="Direction" className='w-full object-cover
                 transition-transform duration-500 group-hover:scale-105 h-full' />
 
                 {direction.isAvaliable && <p className='absolute top-4 left-4 bg-primary
@@ -27,7 +27,7 @@ const DirectionCard = ({ direction }) => {
             <div className='p-4 sm:p-5'>
                 <div className='flex justify-between items-start mb-2'>
                     <div>
-                        <h3 className='text-lg font-medium'>{direction.title}</h3>
+                        <h3 className='text-lg font-medium'>{direction.name}</h3>
                         <p className='text-muted-foreground text-sm'>{direction.description}</p>
                     </div>
                 </div>

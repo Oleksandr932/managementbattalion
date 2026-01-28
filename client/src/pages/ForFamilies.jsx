@@ -104,7 +104,7 @@ const ForFamilies = () => {
             <br />
             <p className='font-semibold'>Ми поруч. Завжди.</p>
             <br />
-            <p>«Сайт 162-ОМБр» створено для того, щоб кожна родина військовослужбовця почувалася захищеною та проінформованою.</p>
+            <p>«Сайт Батальйону Управління 162й-ОМБр» створено для того, щоб кожна родина військовослужбовця почувалася захищеною та проінформованою.</p>
             <p>Ваші питання — важливі. Ваш голос — почутий.</p>
             <p>Ми працюємо, щоб надати вам підтримку на кожному етапі служби вашого близького.</p>
             <br />
@@ -130,13 +130,13 @@ const ForFamilies = () => {
 
             <div className="flex flex-col gap-3">
               {/* Telegram button */}
-              <a href="https://t.me/zsuwar" target="_blank" rel="noopener noreferrer"
+              <a href="https://t.me/Esalesvod" target="_blank" rel="noopener noreferrer"
                 className="w-full text-center py-3 rounded-xl font-medium bg-blue-600 hover:bg-blue-700 text-white  transition-all duration-300 shadow-md hover:shadow-lg">
                 Перейти в Telegram
               </a>
 
               {/* Call button */}
-              <a href="tel:+3380687323736"
+              <a href="tel:+380502924206"
                 className="w-full text-center py-3 rounded-xl font-medium bg-green-600 hover:bg-green-700 text-white transition-all duration-300 shadow-md hover:shadow-lg">
                 Подзвонити
               </a>
@@ -163,7 +163,7 @@ const ForFamilies = () => {
 
             <div className="flex flex-col gap-3">
               {/* Facebook button */}
-              <a href="https://www.facebook.com/AFUkraine/" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.facebook.com/profile.php?id=61587089585828" target="_blank" rel="noopener noreferrer"
                 className="w-full text-center py-3 rounded-xl font-medium bg-blue-600 hover:bg-blue-700 text-white  transition-all duration-300 shadow-md hover:shadow-lg">
                 Перейти в Facebook
               </a>

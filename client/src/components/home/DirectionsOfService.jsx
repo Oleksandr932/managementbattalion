@@ -14,10 +14,10 @@ const DirectionsOfService = () => {
 
     const fetchСategory = async () => {
         try {
-            const { data } = await axios.get('/api/category/all-category')
+            const { data } = await axios.get('/api/job/all-job')
 
             if (data.success) {
-                setDirections(data.reports)
+                setDirections(data.jobs.slice(0, 6))
             } else {
                 toast.error(data.message)
             }
@@ -57,7 +57,7 @@ const DirectionsOfService = () => {
                 transition={{ duration: 1, delay: 0.5 }}
                 className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-18 items-stretch'>
                 {
-                    directions.slice(0, 6).map((direction, index) => (
+                    directions.map((direction, index) => (
                         <motion.div
                             key={direction._id}
                             className="h-full"

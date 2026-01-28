@@ -12,9 +12,9 @@ const Footer = () => {
           {/* Contacts */}
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">Контакти</h3>
-            <p className="text-sm mb-2">Рекрутинговий центр 162 ОМБр</p>
-            <p className="text-sm mb-2">Телефон: <span className="text-white">+380 68 732 37 36</span></p>
-            <p className="text-sm mb-2">Email: <span className="text-white">recruiterombr@gmail.com</span></p>
+            <p className="text-sm mb-2">Рекрутинговий центр Батальйону Управління 162 ОМБр</p>
+            <p className="text-sm mb-2">Телефон: <span className="text-white">+380 50 292 42 06</span></p>
+            <p className="text-sm mb-2">Email: <span className="text-white">batmanag4990@gmail.com</span></p>
             <p className="text-sm">Графік роботи: Пн–Пт, 09:00–18:00</p>
           </div>
 
@@ -49,7 +49,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">Соціальні мережі</h3>
             <div className="flex gap-4 text-xl">
-              <a href="https://www.facebook.com/AFUkraine/" target="_blank" rel="noreferrer" className="hover:text-white transition">
+              <a href="https://www.facebook.com/profile.php?id=61587089585828" target="_blank" rel="noreferrer" className="hover:text-white transition">
                 <img src={assets.facebook} alt="facebook" className='w-10 h-10 invert' />
               </a>
 
@@ -57,7 +57,7 @@ const Footer = () => {
                 <img src={assets.instagram} alt="instagram" className='w-10 h-10 invert' />
               </a>
 
-              <a href="https://t.me/zsuwar" target="_blank" rel="noreferrer" className="hover:text-white transition">
+              <a href="https://t.me/Esalesvod" target="_blank" rel="noreferrer" className="hover:text-white transition">
                 <img src={assets.telegram} alt="telegram" className='w-10 h-10 invert' />
               </a>
 
@@ -84,7 +84,7 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="border-t border-gray-700 mt-12 pt-6 text-center text-sm text-gray-400">
-          © {new Date().getFullYear()} 162 Окрема Механізована Бригада. Всі права захищено.
+          © {new Date().getFullYear()} Батальйон Управління 162й Окремой Механізованой Бригади. Всі права захищено.
         </div>
       </div>
     </footer>

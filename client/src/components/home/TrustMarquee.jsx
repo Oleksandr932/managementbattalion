@@ -6,22 +6,26 @@ export const TrustMarquee = () => {
       
       <div className="flex items-center gap-10 animate-scroll whitespace-nowrap lg:text-white text-sm opacity-80 max-sm:text-sm max-sm:text-gray-700">
         
-        <span>Понад 1 000 добровольців уже вступили</span>
+        <span>Понад 1 00 добровольців уже вступили</span>
         <span>•</span>
         <span>Офіційний рекрутинговий ресурс</span>
         <span>•</span>
         <span>Підтримка 24/7</span>
         <span>•</span>
         <span>162 ОМБР</span>
+        <span>•</span>
+        <span>Батальйон Управління</span>
 
         <span>•</span>
-        <span>Понад 1 000 добровольців уже вступили</span>
+        <span>Понад 1 00 добровольців уже вступили</span>
         <span>•</span>
         <span>Офіційний рекрутинговий ресурс</span>
         <span>•</span>
         <span>Підтримка 24/7</span>
         <span>•</span>
         <span>162 ОМБР</span>
+        <span>•</span>
+        <span>Батальйон Управління</span>
 
       </div>
     </div>
