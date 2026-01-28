@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import Title from '../../components/owner/Title';
 import { useAppContext } from '../../context/AppContext';
 import toast from 'react-hot-toast';
-import { motion } from 'motion/react'
 
 const DelRepord = () => {
     const { axios } = useAppContext()
@@ -48,25 +47,26 @@ const DelRepord = () => {
             {/* Reports list */}
             <div className='mt-8 grid gap-6 max-w-4xl'>
                 {reportsData.map((report) => (
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1, delay: 0.5 }}
-                        className="flex flex-col md:flex-row items-start gap-6 bg-white p-6 rounded-xl shadow-md"
-                        key={index + "report"} >
-                        <div>
-                            <img src={report.image} alt={report.title} className="min-w-70 max-w-70 h-auto object-cover rounded-lg shadow-sm" />
-                        </div>
-                        <div>
+                    <div
+                        key={report._id}
+                        className='flex flex-col md:flex-row items-start gap-6 bg-white p-6 rounded-xl shadow-md'>
+                        <img
+                            src={report.image}
+                            alt={report.title}
+                            className='min-w-40 max-w-40 h-40 object-cover rounded-lg shadow-sm border border-borderColor'
+                        />
+
+                        <div className='flex-1'>
                             <p className='text-lg font-semibold text-primary'>{report.title}</p>
                             <p className='text-sm text-black pt-2'>{report.description}</p>
                         </div>
+
                         <button
                             onClick={() => deleteReport(report._id)}
                             className='bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md flex items-center gap-2 transition-all'>
                             Видалити
                         </button>
-                    </motion.div>
+                    </div>
                 ))}
             </div>
         </div>
