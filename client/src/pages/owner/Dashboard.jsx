@@ -60,7 +60,6 @@ const Dashboard = () => {
   useEffect(() => {
     fetchJob()
     fetchNeed()
-    fetchСategory()
     fetchReports()
   }, [])
 
