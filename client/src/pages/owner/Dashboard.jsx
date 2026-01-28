@@ -6,13 +6,11 @@ import { useAppContext } from '../../context/AppContext';
 const Dashboard = () => {
   const { axios } = useAppContext()
   const [totalJobs, setTotalJobs] = useState(0);
-  const [totalCategories, setTotalCategories] = useState(0);
   const [totalNeeds, setTotalNeeds] = useState(0);
   const [totalReports, setTotalReports] = useState(0);
 
   const dashbordCards = [
     { title: "Розміщено вакансіій", value: totalJobs },
-    { title: "Розміщено категорій", value: totalCategories },
     { title: "Розміщено потреб", value: totalNeeds },
     { title: "Розміщено звітів", value: totalReports },
   ]
@@ -37,20 +35,6 @@ const Dashboard = () => {
 
       if (data.success) {
         setTotalNeeds(data.needs.length)
-      } else {
-        toast.error(data.message)
-      }
-    } catch (error) {
-      toast.error(error.message)
-    }
-  };
-
-  const fetchСategory = async () => {
-    try {
-      const { data } = await axios.get('/api/category/all-category')
-
-      if (data.success) {
-        setTotalCategories(data.reports.length)
       } else {
         toast.error(data.message)
       }
