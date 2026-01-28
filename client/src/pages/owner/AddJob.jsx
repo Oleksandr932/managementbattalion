@@ -13,26 +13,9 @@ const AddJob = () => {
   const [responsibilities, setResponsibilities] = useState([]);
   const [requirements, setRequirements] = useState([]);
   const [terms, setTerms] = useState([]);
-  const [categoryData, setСategoryData] = useState([]);
-
-  // завантаження категорій
-  const fetchСategory = async () => {
-    try {
-      const { data } = await axios.get('/api/category/all-category')
-
-      if (data.success) {
-        setСategoryData(data.reports)
-      } else {
-        toast.error(data.message)
-      }
-    } catch (error) {
-      toast.error(error.message)
-    }
-  };
 
   // поля вакансії
   const [job, setJob] = useState({
-    category: "",
     name: "",
     description: "",
     responsibilities: [],
@@ -109,7 +92,6 @@ const AddJob = () => {
       if (data.success) {
         toast.success(data.message);
         setJob({
-          category: "",
           name: "",
           description: "",
           responsibilities: [],
@@ -130,10 +112,6 @@ const AddJob = () => {
     }
   };
 
-  useEffect(() => {
-    fetchСategory();
-  }, []);
-
   return (
     <div className='px-4 py-10 md:px-10 flex-1'>
       {/* title */}
@@ -151,20 +129,6 @@ const AddJob = () => {
               hidden />
           </label>
           <p className='text-sm text-gray-500'>Додайте фото</p>
-        </div>
-
-        {/* Categories */}
-        <div className="mt-6 max-w-xl">
-          <label className="text-gray-600">Категорія</label>
-          <select value={job.category || ""}
-            onChange={(e) => setJob({ ...job, category: e.target.value })}
-            className="px-3 py-2 mt-1 border border-borderColor rounded-md outline-none w-full bg-white cursor-pointer">
-            <option value="">Усі вакансії</option>
-
-            {categoryData.map((direction) => (
-              <option key={direction._id} value={direction._id}> {direction.title}</option>
-            ))}
-          </select>
         </div>
 
         {/* name */}
