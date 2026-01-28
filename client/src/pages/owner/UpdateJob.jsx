@@ -17,11 +17,9 @@ const UpdateJob = () => {
     const [responsibilities, setResponsibilities] = useState([]);
     const [requirements, setRequirements] = useState([]);
     const [terms, setTerms] = useState([]);
-    const [categoryData, setCategoryData] = useState([]);
 
     // fields
     const [job, setJob] = useState({
-        category: "",
         name: "",
         description: "",
         responsibilities: [],
@@ -34,20 +32,6 @@ const UpdateJob = () => {
     const [reqInput, setReqInput] = useState("");
     const [termsInput, setTermsInput] = useState("");
 
-    // --- Завантаження категорій та вакансії ---
-    const fetchCategory = async () => {
-        try {
-            const { data } = await axios.get('/api/category/all-category')
-            if (data.success) {
-                setCategoryData(data.reports)
-            } else {
-                toast.error(data.message)
-            }
-        } catch (error) {
-            toast.error(error.message)
-        }
-    };
-
     const fetchJob = async () => {
         try {
             const { data } = await axios.get(`/api/job/job/${id}`)
@@ -59,10 +43,7 @@ const UpdateJob = () => {
                 setResponsibilities(j.responsibilities || [])
                 setRequirements(j.requirements || [])
                 setTerms(j.terms || [])
-                // Якщо j.category — об'єкт, беремо його id; якщо вже id — беремо id
-                const categoryId = j.category?._id || j.category || ""
                 setJob({
-                    category: categoryId,
                     name: j.name || "",
                     description: j.description || "",
                     responsibilities: j.responsibilities || [],
@@ -76,7 +57,6 @@ const UpdateJob = () => {
     };
 
     useEffect(() => {
-        fetchCategory();
         fetchJob();
         // очистити тимчасове previewUrl при unmount
         return () => {
@@ -208,18 +188,6 @@ const UpdateJob = () => {
                             <button type="button" onClick={removeImage} className='px-3 py-1 bg-red-50 text-red-600 rounded'>Видалити</button>
                         </div>
                     </div>
-                </div>
-
-                {/* Categories */}
-                <div className="mt-6 max-w-xl">
-                    <label className="text-gray-600">Категорія</label>
-                    <select value={job.category || ""} onChange={(e) => setJob({ ...job, category: e.target.value })}
-                        className="px-3 py-2 mt-1 border border-borderColor rounded-md outline-none w-full bg-white cursor-pointer">
-                        <option value="">{job.category ? "Вибрано категорію" : "Виберіть категорію"}</option>
-                        {categoryData.map((direction) => (
-                            <option key={direction._id} value={direction._id}> {direction.title}</option>
-                        ))}
-                    </select>
                 </div>
 
                 {/* name */}
