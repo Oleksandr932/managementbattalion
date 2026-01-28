@@ -80,7 +80,7 @@ export const getAllJobController = async (req, res) => {
 export const getJobByIdController = async (req, res) => {
     try {
         const { id } = req.params;
-        const job = await Job.findById(id).populate("category");
+        const job = await Job.findById(id);
         res.status(200).json({
             success: true,
             error: false,
