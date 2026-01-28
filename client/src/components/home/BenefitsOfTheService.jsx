@@ -14,7 +14,7 @@ const BenefitsOfTheService = () => {
             {/* info and button */}
             <div className='text-white'>
                 {/* title */}
-                <h2 className='max-sm:text-center max-sm:text-2xl md:text-3xl font-semibold mt-2'>Переваги служби в 162-ОМБр</h2>
+                <h2 className='max-sm:text-center max-sm:text-2xl md:text-3xl font-semibold mt-2'>Переваги служби в Батальйоні управління 162 ОМБр</h2>
                 <p className='max-w-130'>Служба — це не лише обов’язок, а й реальні вигоди: стабільний дохід, підтримка родини, професійне зростання та захист.</p>
                 {/* list */}
                 {

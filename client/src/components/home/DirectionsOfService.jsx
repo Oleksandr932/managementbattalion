@@ -42,7 +42,7 @@ const DirectionsOfService = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.5 }}>
                 <Title
-                    text="Обери свій шлях в 162 ОМБр"
+                    text="Обери свій шлях у Батальйоні управління 162 ОМБр"
                     color="black"
                 />
                 <SubTitle

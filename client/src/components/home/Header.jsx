@@ -27,14 +27,14 @@ const Heared = () => {
             <div className="flex flex-col items-center gap-4 px-4 lg:absolute lg:top-38 lg:left-1/2 lg:-translate-x-1/2 lg:w-full lg:max-w-3xl lg:z-50 max-lg:mt-6 ">
                 {/* Title */}
                 <Title
-                    text="162 Окрема Механізована Бригада"
+                    text="Батальйон управління 162 окремої механізованої бригади"
                     color="white"
                 />
 
                 {/* Subtitle */}
                 <SubTitle
-                    text="Захищай Батьківщину разом з нами! Приєднуйся до 162 ОМБр -
-                    сили, що стоїть на варті миру та безпеки України."
+                    text="Забезпечує керованість, зв’язок і координацію підрозділів 162 ОМБр.
+                            Служба там, де приймаються рішення і тримається цілісність бойових дій."
                     color="white"
                 />
                 {/* Buttons */}
