@@ -16,21 +16,21 @@ import questionnaire from "./questionnaire.png"
 import telegram from "./telegram.png"
 import instagram from "./Instagram.png"
 import facebook from "./facebook.png"
-import hero from "./hero.webp"
-import FaqBanner from "./FaqBanner.webp"
-import volunteers from "./volunteers.webp"; 
-import family from "./family.webp";
-import positions from "./positions.webp"
+import HomeHero from "./HomeHero.webp"
+import FamilyHero from "./FamilyHero.webp"
+import FaqHero from "./FaqHero.webp"
+import PositionsHero from "./PositionsHero.webp"
+import VolunteersHero from "./VolunteersHero.webp"
 import check_icon from "./check_icon.svg"
 import hevron from "./hevron.png"
 import upload_icon from "./upload_icon.svg"
 
 export const assets = {
-    hero,
-    positions,
-    volunteers,
-    family,
-    FaqBanner,
+    HomeHero,
+    PositionsHero,
+    VolunteersHero,
+    FamilyHero,
+    FaqHero,
     
     logo,
     hevron,

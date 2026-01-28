@@ -15,7 +15,7 @@ const Faq = () => {
 
   return (
     <section id="faq" className="reletive w-full bg-sand-500/20">
-      <img src={assets.FaqBanner} alt="faq" className="w-full h-auto lg:h-screen object-cover mx-auto" />
+      <img src={assets.FaqHero} alt="faq" className="w-full h-auto lg:h-screen object-cover mx-auto" />
 
       {/* Dark overlay for lg+ */}
       <div className="hidden lg:block absolute top-0 left-0 w-full h-screen bg-black/50"></div>

@@ -18,7 +18,7 @@ const Heared = () => {
             transition={{ duration: 1, ease: "easeOut" }}
             className='reletive w-full'>
 
-            <img src={assets.hero} alt="heared" className='w-full h-auto lg:h-screen object-cover' />
+            <img src={assets.HomeHero} alt="heared" className='w-full h-auto lg:h-screen object-cover' />
 
             {/* Dark overlay for lg+ */}
             <div className="hidden lg:block absolute inset-0 bg-black/50"></div>

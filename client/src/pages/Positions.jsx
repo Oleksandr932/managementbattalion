@@ -35,7 +35,7 @@ const Positions = () => {
       transition={{ duration: 1, ease: "easeOut" }}
       className='reletive w-full bg-sand-500/20'>
 
-      <img src={assets.positions} alt="positions" className='w-full h-auto lg:h-screen object-cover' />
+      <img src={assets.PositionsHero} alt="positions" className='w-full h-auto lg:h-screen object-cover' />
 
       <div className="pt-24"></div>
 
