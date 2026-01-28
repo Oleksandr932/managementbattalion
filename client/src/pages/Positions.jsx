@@ -4,18 +4,13 @@ import { Title } from '../components/helpers/Title'
 import { SubTitle } from '../components/helpers/SubTitle'
 import { motion } from 'motion/react'
 import { useNavigate } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
-import { setCategory } from '../store/categorySlice'
 import { useAppContext } from '../context/AppContext'
 
 const Positions = () => {
   const [bgColor, setBgColor] = useState()
   const { axios } = useAppContext()
   const [positionsJob, setPositionsJob] = useState([])
-  const [categoryData, setСategoryData] = useState([]);
-  const dispatch = useDispatch()
   const navigate = useNavigate();
-  const categoryName = useSelector((state) => state.category.categoryName);
 
   const fetchJob = async () => {
     try {
@@ -62,50 +57,26 @@ const Positions = () => {
       </div>
 
       {/* Positions */}
-      {categoryName ? (
-          positionsJob.filter(position => position.category === categoryName).map((position) => (
-            <div key={position._id} className='bg-sand-500/20 px-6 md:px-16 lg:px-24 xl:px-32 mt-12 mb-24'>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.5 }}
-                className="cursor-pointer flex flex-col md:flex-row items-start md:items-center gap-6 bg-white p-6 rounded-xl shadow-md "
-                onClick={() => { navigate(`/position/${position._id}`); scrollTo(0, 0) }}>
+      {positionsJob.map((position, index) => (
+        <div key={position._id} className='bg-sand-500/20 px-6 md:px-16 lg:px-24 xl:px-32 mt-12 mb-24'>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            className="cursor-pointer flex flex-col md:flex-row items-start md:items-center gap-6 bg-white p-6 rounded-xl shadow-md"
+            onClick={() => { navigate(`/position/${position._id}`); scrollTo(0, 0) }}>
 
-                <img src={position.image} alt="" className="w-24 h-24 object-cover rounded-lg shadow-sm" />
-                <div className="flex-1">
-                  <SubTitle
-                    text={position.name}
-                    color='primary'
-                  />
-                  <p className='text-black mt-4 mb-6 cursor-pointer'>{position.description}</p>
-                </div>
-              </motion.div>
+            <img src={position.image} alt="" className="w-24 h-24 object-cover rounded-lg shadow-sm" />
+            <div className="flex-1">
+              <SubTitle
+                text={position.name}
+                color='primary'
+              />
+              <p className='text-black mt-4 mb-6'>{position.description}</p>
             </div>
-          ))) : (
-          positionsJob.map((position, index) => (
-            <div key={position._id} className='bg-sand-500/20 px-6 md:px-16 lg:px-24 xl:px-32 mt-12 mb-24'>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.5 }}
-                className="cursor-pointer flex flex-col md:flex-row items-start md:items-center gap-6 bg-white p-6 rounded-xl shadow-md"
-                onClick={() => { navigate(`/position/${position._id}`); scrollTo(0, 0) }}>
-
-                <img src={position.image} alt="" className="w-24 h-24 object-cover rounded-lg shadow-sm" />
-                <div className="flex-1">
-                  <SubTitle
-                    text={position.name}
-                    color='primary'
-                  />
-                  <p className='text-black mt-4 mb-6'>{position.description}</p>
-                </div>
-              </motion.div>
-            </div>
-          ))
-
-        )
-      }
+          </motion.div>
+        </div>
+      ))}
 
     </motion.div >
   )

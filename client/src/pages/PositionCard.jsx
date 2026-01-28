@@ -13,7 +13,6 @@ const PositionCard = () => {
         name: "",
         description: "",
 
-        category: "",
         responsibilities: [],
         requirements: [],
         terms: [],
