@@ -11,17 +11,22 @@ html {
 }
 
 @theme {
-  --color-primary: #6B7B4A;
-  --color-primery-dull: #1F58D8;
-  --color-light: #F1F5F9;
-  --color-borderColor: #c4c7d2;
-  --color-army-900: #0B2A15;
-  --color-army-800: #113B21;
-  --color-army-700: #2A5A30;
-  --color-army-700: #D9C9A3;
-  --color-accent-yellow: #E0B23A;
-  --color-muted-foreground: #B8BDB3;
-  --color-charcoal: #111213;
+  /* PRIMARY — холодний штабний зелений */
+  --color-primary: #4F6B5A;
+  /* ACCENT — приглушений командний жовтий */
+  --color-accent-yellow: #C9A23A;
+  /* BACKGROUND */
+  --color-light: #F2F4F6;
+  /* BORDERS / DIVIDERS */
+  --color-borderColor: #C6CCD3;
+  /* ARMY GREENS — затемнені, менш “польові” */
+  --color-army-900: #0F1E16;
+  --color-army-800: #1A2F24;
+  --color-army-700: #2E4A3C;
+  /* MUTED TEXT */
+  --color-muted-foreground: #9FA7A1;
+  /* CHARCOAL — базовий текст */
+  --color-charcoal: #101112;
 }
 
 @keyframes scroll {
