@@ -58,7 +58,7 @@ const DelRepord = () => {
 
                         <div className='flex-1'>
                             <p className='text-lg font-semibold text-primary'>{report.title}</p>
-                            <p className='text-sm text-gray-600 mt-2'>{report.description}</p>
+                            <p className='text-sm text-black pt-2'>{report.description}</p>
                         </div>
 
                         <button
